@@ -1,0 +1,32 @@
+.backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.75rem;
+  z-index: 50;
+  border-radius: 100%;
+  border: var(--nav-text-color) 1px solid;
+  background-color: var(--primary-color);
+  color: var(--primary-neutral-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease, filter 0.3s ease;
+  transform: scale(0);
+  opacity: 0;
+  cursor: pointer;
+
+  .arrow {
+    font-size: 28px;
+    font-weight: var(--font-weight-bold);
+  }
+
+  &.visible {
+    opacity: 0.5;
+    transform: scale(1);
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+      filter: brightness(1.07);
+    }
+  }
+}

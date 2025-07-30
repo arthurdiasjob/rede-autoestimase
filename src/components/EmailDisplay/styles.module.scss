@@ -1,0 +1,14 @@
+@use "../../app/breakpoints";
+
+.emailContainer {
+  margin: 0.5rem 0;
+
+  .label {
+    color: var(--primary-text-color);
+  }
+
+  .emailLink {
+    color: var(--primary-text-color);
+    text-decoration: underline;
+  }
+}

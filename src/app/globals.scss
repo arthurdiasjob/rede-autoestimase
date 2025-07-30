@@ -1,0 +1,66 @@
+@use "breakpoints";
+
+// Variables
+
+:root {
+  --primary-color: #945a9a;
+  --secondary-color: #b77fb6;
+  --ternary-color: #ce93cd;
+
+  --primary-neutral-color: #ffffff;
+  --secondary-neutral-color: #3b413f;
+  --tertiary-neutral-color: #30473c;
+  --quaternary-neutral-color: #d0d0d0;
+
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #3b413f;
+  --nav-text-color: #888888;
+  --year-text-color: #d9d9d9;
+
+  --header-border-color: #f2f2f2;
+
+  --error: #f0ad4e;
+
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-heading: "Outfit";
+  --font-body: "Open Sans";
+}
+
+html,
+body,
+input,
+p,
+a {
+  font-family: var(--font-body);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-heading);
+}
+
+p {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+@include breakpoints.media("<desktop") {
+  p {
+    text-align: justify;
+  }
+}

@@ -1,0 +1,121 @@
+@use "../../breakpoints";
+
+.pageContainer {
+  padding: 0 1rem;
+}
+
+.pageContainer,
+.titleContainer,
+.seeMoreWrapper,
+.seeMoreTitle,
+.seeMoreLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-text-color);
+}
+
+.titleContainer {
+  padding: 5rem 1rem 1.5rem 1rem;
+  gap: 1.125rem;
+
+  h1 {
+    color: var(--primary-color);
+
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 2.8rem;
+  }
+
+  h2 {
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+.textBox,
+.seeMoreText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 760px;
+  text-align: left;
+}
+
+.seeMoreWrapper {
+  width: 730px;
+  height: auto;
+  padding: 4rem 0;
+  gap: 2rem;
+}
+
+.seeMore {
+  width: 100%;
+
+  border: 1px solid #d0d0d0;
+  padding: 1rem;
+}
+
+.seeMoreTitle {
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+
+  cursor: pointer;
+
+  span {
+    font-size: 40px;
+  }
+}
+
+.seeMoreArrow {
+  color: var(--primary-color);
+  transition: transform 0.3s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.rotated {
+  transform: rotate(-180deg);
+  transform-origin: center;
+}
+
+.seeMoreText {
+  padding-top: 1rem;
+}
+
+.seeMoreLinks {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 1rem 0;
+  gap: 1rem 4.5rem;
+
+  a {
+    justify-self: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-decoration: underline;
+
+    color: var(--primary-color);
+  }
+}
+
+.textLink {
+  width: 100%;
+}
+
+@include breakpoints.media("<tablet") {
+  .seeMoreWrapper {
+    width: 95%;
+  }
+}

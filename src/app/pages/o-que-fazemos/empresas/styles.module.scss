@@ -1,0 +1,184 @@
+@use "../../../breakpoints";
+
+.empresas {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 32px;
+
+  .banner {
+    background: black;
+  }
+
+  .splitViewSection {
+    display: flex;
+    flex-direction: column;
+
+    .split {
+      display: flex;
+
+      .mobileTitle {
+        display: none;
+      }
+
+      .splitImage {
+        width: 50vw;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .splitContentContainer {
+        width: 50vw;
+        height: auto;
+
+        .splitContent {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 40px;
+          margin-left: 40px;
+          padding: 64px 135px 64px 0;
+
+          .title {
+            font-size: 36px;
+            color: var(--primary-color);
+          }
+
+          .text {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+          }
+        }
+      }
+    }
+
+    .split2 {
+      flex-direction: row-reverse;
+      .splitContentContainer {
+        .splitContent {
+          padding: 64px 0px 64px 135px;
+          margin-left: 0;
+          margin-right: 40px;
+
+          .text {
+            .socials {
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+              .mail {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: black;
+                gap: 20px;
+              }
+
+              .whatsApp {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: black;
+                gap: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .servicesWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 135px 120px;
+    gap: 40px;
+    background-color: #3b413f;
+    font-size: 18px;
+    line-height: 32px;
+
+    .h1Services {
+      color: var(--primary-text-color);
+      font-size: 36px;
+    }
+
+    .cardGrid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding: 0;
+      gap: 20px;
+    }
+  }
+}
+
+@include breakpoints.media("<desktop") {
+  .empresas {
+    .splitViewSection {
+      .split {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 48px 0;
+        gap: 40px;
+
+        .mobileTitle {
+          display: block;
+          font-size: 36px;
+          color: var(--primary-color);
+        }
+
+        .splitImage {
+          width: 100vw;
+        }
+
+        .splitContentContainer {
+          width: 100vw;
+
+          .splitContent {
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+
+            .title {
+              display: none;
+            }
+
+            .text {
+              padding: 0 24px;
+
+              p {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      .split2 {
+        .splitContentContainer {
+          .splitContent {
+            .text {
+              .socials {
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .servicesWrapper {
+      .cardGrid {
+        flex-direction: column;
+      }
+    }
+  }
+}

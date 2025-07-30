@@ -1,0 +1,42 @@
+@use "../../app/breakpoints";
+
+.socialMediaContainer{
+  position: absolute;
+  top: -30px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: transparent;
+  z-index: 10; 
+  height: auto;
+}
+.socialContainer{
+  display: flex;
+  flex-direction: row;
+}
+.socialMediaList{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+  margin-top: -3px;
+}
+.socialMediaItem{
+  display: contents;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.socialMediaIcon{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}

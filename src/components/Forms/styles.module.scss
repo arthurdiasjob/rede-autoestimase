@@ -1,0 +1,191 @@
+@use "../../app/breakpoints";
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  padding: 100px 135px;
+  gap: 40px;
+  // border-bottom: 1px solid var(--primary-neutral-color);
+  font-size: 18px;
+  line-height: 32px;
+
+  .formH1 {
+    color: var(--primary-neutral-color);
+    font-size: 36px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 16px;
+    width: 600px;
+
+    .inputGroup {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      gap: 16px;
+    }
+
+    .submitButton {
+      border: 1px solid var(--primary-neutral-color);
+      width: 100%;
+    }
+  }
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--primary-neutral-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hapinessWrapper {
+  display: flex;
+  background-color: var(--secondary-neutral-color);
+  color: var(--primary-neutral-color);
+  padding: 100px 135px;
+  font-size: 18px;
+  line-height: 32px;
+
+  .fullContent {
+    display: flex;
+    z-index: 1;
+
+    .hapinessImageContainer {
+      position: relative;
+      width: 18.2vw;
+      height: 100%;
+
+      .hapinessImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        opacity: 1;
+      }
+
+      .hapinessImageMobile {
+        display: none;
+      }
+
+      .hapinessImageTitle {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 3;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to top left,
+          rgba(0, 0, 0, 0) 30%,
+          var(--secondary-neutral-color) 100%
+        );
+        z-index: 2;
+        pointer-events: none;
+      }
+    }
+
+    .content {
+      width: 60vw;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-left: 40px;
+
+      .topic {
+        list-style: none;
+      }
+
+      .mailTo {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: fit-content;
+        gap: 20px;
+        padding: 16px 24px;
+        border: solid 1px var(--primary-neutral-color);
+        transition: all 0.3s ease;
+
+        .email {
+          text-decoration: none;
+          color: var(--primary-neutral-color);
+        }
+
+        &:hover {
+          scale: 1.05;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints.media("<desktop") {
+  .formWrapper {
+    padding: 100px 24px;
+
+    .form {
+      width: 100%;
+      .inputGroup {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .hapinessWrapper {
+    padding: 100px 24px;
+
+    .fullContent {
+      flex-direction: column;
+      gap: 40;
+
+      .hapinessImageContainer {
+        width: 100%;
+        height: 100%;
+
+        .hapinessImage {
+          display: none;
+        }
+
+        // .hapinessImageMobile {
+        //   display: block;
+        //   width: 100%;
+        //   height: 100%;
+        //   object-fit: cover;
+        // }
+      }
+
+      .content {
+        width: 100%;
+        margin: 0;
+
+        // .mailTo {
+        //   gap: 12px;
+        //   font-size: 16px;
+        //   padding: 16px 16px;
+        // }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "../../app/breakpoints";
+
+.contenMapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.contenMapa > h3 {
+  margin-top: 40px;
+  color: var(--primary-color);
+  text-align: center;
+  width: 100%;
+}
+
+.svg-map {
+  width: auto;
+  max-width: 60%;
+  height: auto;
+  margin: 20px 0;
+
+  path.desativo {
+    fill: var(--nav-text-color);
+  }
+
+  path.ativo {
+    fill: var(--primary-color);
+  }
+
+  .texto-ativo {
+    fill: #fff;
+    font: 12px Arial-BoldMT, sans-serif;
+    cursor: pointer;
+  }
+
+  .texto-desativo {
+    fill: transparent;
+    font: 12px Arial-BoldMT, sans-serif;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .circle-desativo {
+    fill: transparent;
+  }
+
+  .circle-ativo {
+    fill: var(--secondary-color);
+  }
+}

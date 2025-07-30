@@ -1,0 +1,20 @@
+.emojiDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -28px 0; 
+  position: relative;
+  z-index: 5;
+
+
+  img {
+    width: 56px;
+    height: 56px;
+    border-radius: 999%;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    z-index: 10;
+  }
+}

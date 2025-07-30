@@ -1,0 +1,74 @@
+@use "../../app/breakpoints";
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p {
+    color: var(--nav-text-color);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .flag-toggle {
+    display: flex;
+    align-items: center;
+    background: none;
+    gap: 0.2rem;
+    padding: 0.3rem;
+    border: rgba(128, 128, 128, 0.5) solid 0.5px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    .arrow-icon {
+      font-size: 14px;
+    }
+
+    &--mobile {
+      border: none;
+      background: none;
+    }
+  }
+
+  .language-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-neutral-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--header-border-color);
+    z-index: 1000;
+
+    .flag {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@include breakpoints.media("<desktop") {
+  .languages {
+    width: 35%;
+    justify-content: space-between;
+    margin-top: 3.5rem
+  }
+}
+
+@include breakpoints.media(">desktop") {
+  .languages {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 2.5rem;
+  }
+}
