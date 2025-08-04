@@ -554,6 +554,74 @@
   }
 }
 
+@include breakpoints.media("<desktop") {
+  .homeAbout {
+    flex-direction: column;
+    padding: 60px 20px;
+
+    .aboutContent {
+      align-items: center;
+      text-align: center;
+
+      .aboutVideoDesk {
+        display: none;
+      }
+
+      .aboutVideoMobile {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+    }
+  }
+
+  .acolhimentoHeader {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .acolhimentoContent {
+    .cardContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .acolhimentoResultados {
+    margin: 160px 0 80px;
+  }
+
+  .conquistas, .midia, .doadores, .faq {
+    padding: 60px 20px;
+  }
+
+  .aboutHeader {
+    h1 {
+      font-size: 28px !important;
+      max-width: fit-content !important;
+    }
+  }
+
+  .conquistasCardContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    .conquistasCardElement {
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+    }
+  }
+
+  .midiaHeader {
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+}
+
 // .seeMore {
 //   width: 100%;
 

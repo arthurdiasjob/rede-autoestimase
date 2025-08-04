@@ -233,17 +233,6 @@ export default function Home() {
             <div>SOBRE AUTOESTIMA-SE</div>
             <h1>O que nos traz aqui?</h1>
           </div>
-          <div className={styles.aboutVideoMobile}>
-            <iframe
-              // width="560"
-              // height="315"
-              src="https://www.youtube.com/embed/I0hvYveJDLQ"
-              title="YouTube video player"
-              // frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              // allowfullscreen
-            ></iframe>
-          </div>
           <p className={styles.aboutDesc}>
             A Rede Autoestima-se é uma organização da sociedade civil sem fins
             lucrativos que desde 2020, democratiza o acesso a atendimentos
