@@ -1,0 +1,215 @@
+@use "../../../breakpoints";
+
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .projectDescription {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    font-family: var(--font-heading);
+
+    .descriptionSubsection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--primary-neutral-color);
+      padding: 64px 340px;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  .servicesWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 135px 120px;
+    gap: 40px;
+    background-color: #3b413f;
+
+    .h1Desk {
+      display: block;
+      color: var(--primary-neutral-color);
+      font-size: 36px;
+    }
+
+    .h1Mob {
+      display: none;
+      color: var(--primary-neutral-color);
+      font-size: 36px;
+    }
+
+    .cardGrid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      gap: 20px;
+    }
+  }
+
+  .impact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 100px 340px;
+    gap: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    background-color: var(--primary-color);
+    color: var(--primary-neutral-color);
+
+    h1 {
+      align-self: center;
+      font-size: 36px;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .seeMore {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 40px 0;
+      gap: 24px;
+      color: #3b413f;
+      background-color: var(--primary-neutral-color);
+      border-radius: 16px;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        gap: 12px;
+      }
+
+      .menu {
+        background-color: var(--primary-color);
+      }
+
+      .item {
+        padding: 0.75rem 2.6rem;
+
+        &:hover {
+          background-color: #9e60a5;
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 135px;
+    gap: 40px;
+    background-color: var(--primary-neutral-color);
+
+    h1 {
+      color: var(--primary-color);
+      font-size: 36px;
+    }
+
+    .testimonialGrid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 16px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 24px;
+        gap: 24px;
+        border-radius: 16px;
+        border: 1px solid #d0d0d0;
+        background-color: #f9f9f9;
+
+        &:nth-child(1) {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        &:nth-child(2) {
+          background-color: #f2e2f2;
+          border-color: #a46fa5;
+          grid-column: 2;
+          grid-row: 1 / span 2;
+        }
+
+        &:nth-child(3) {
+          grid-column: 1;
+          grid-row: 2;
+        }
+
+        p {
+          text-align: left;
+          font-size: 18px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints.media("<desktop") {
+  .pageWrapper {
+    .projectDescription {
+      .descriptionSubsection {
+        padding: 80px 24px;
+      }
+    }
+
+    .servicesWrapper {
+      flex-direction: column;
+      padding: 100px 24px 120px;
+
+      .h1Desk {
+        display: none;
+      }
+
+      .h1Mob {
+        display: block;
+      }
+
+      .cardGrid {
+        flex-direction: column;
+      }
+    }
+
+    .impact {
+      padding: 100px 24px;
+      gap: 44px;
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    .testimonials {
+      padding: 100px 24px;
+      gap: 44px;
+
+      .testimonialGrid {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

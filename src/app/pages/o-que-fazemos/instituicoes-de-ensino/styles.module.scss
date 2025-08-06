@@ -1,0 +1,233 @@
+@use "../../../breakpoints";
+
+.instituicoes {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 32px;
+
+  .banner {
+    background: black;
+  }
+
+  .splitViewSection {
+    display: flex;
+    flex-direction: column;
+
+    .split {
+      display: flex;
+
+      .mobileTitle {
+        display: none;
+      }
+
+      .splitImage {
+        width: 50vw;
+        height: auto;
+      }
+
+      .splitContentContainer {
+        width: 50vw;
+        height: auto;
+
+        .splitContent {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 40px;
+          margin-left: 40px;
+          padding: 64px 135px 64px 0;
+
+          .title {
+            font-size: 36px;
+            color: var(--primary-color);
+          }
+
+          .text {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+          }
+        }
+      }
+    }
+
+    .split2 {
+      flex-direction: row-reverse;
+
+      .splitContentContainer {
+        .splitContent {
+          margin-left: 0;
+          margin-right: 40px;
+          padding: 64px 0px 64px 135px;
+        }
+      }
+    }
+  }
+
+  .servicesWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 135px 120px;
+    gap: 40px;
+    background-color: #3b413f;
+    font-size: 18px;
+
+    .h1Services {
+      color: var(--primary-text-color);
+      font-size: 36px;
+    }
+
+    .cardGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+      align-items: stretch;
+      justify-content: center;
+      text-align: center;
+
+      .mainGrid {
+        display: contents;
+
+        > div:nth-child(1) {
+          grid-column: 1;
+          grid-row: 1;
+        }
+        > div:nth-child(2) {
+          grid-column: 2;
+          grid-row: 1;
+        }
+        > div:nth-child(3) {
+          grid-column: 3;
+          grid-row: 1;
+        }
+        > div:nth-child(4) {
+          grid-column: 1;
+          grid-row: 2;
+        }
+        > div:nth-child(5) {
+          grid-column: 2;
+          grid-row: 2;
+        }
+        > div:nth-child(6) {
+          grid-column: 3;
+          grid-row: 2;
+        }
+      }
+
+      .secGrid {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+
+        .cardHeight {
+          height: 100%;
+        }
+      }
+    }
+
+    .pServices {
+      color: var(--primary-text-color);
+      max-width: 760px;
+      font-size: 24px;
+      font-weight: var(--font-weight-bold);
+      text-align: center;
+    }
+  }
+}
+
+@include breakpoints.media("<desktop") {
+  .instituicoes {
+    .splitViewSection {
+      .split {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 48px 0;
+        gap: 40px;
+
+        .mobileTitle {
+          display: block;
+          font-size: 36px;
+          color: var(--primary-color);
+        }
+
+        .splitImage {
+          width: 100vw;
+        }
+
+        .splitContentContainer {
+          width: 100vw;
+
+          .splitContent {
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+
+            .title {
+              display: none;
+            }
+            .text {
+              padding: 0 24px;
+
+              p {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .servicesWrapper {
+      .cardGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+
+        .mainGrid {
+          display: contents;
+
+          > div:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
+          }
+          > div:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+          }
+          > div:nth-child(3) {
+            grid-column: 1;
+            grid-row: 2;
+          }
+          > div:nth-child(4) {
+            grid-column: 2;
+            grid-row: 2;
+          }
+          > div:nth-child(5) {
+            grid-column: 1;
+            grid-row: 3;
+          }
+          > div:nth-child(6) {
+            grid-column: 2;
+            grid-row: 3;
+          }
+        }
+
+        .secGrid {
+          grid-column: span 2;
+          grid-row: auto;
+
+          .cardWidth {
+            width: 100%;
+          }
+          // .cardHeight {
+          //   height: 300px;
+          // }
+        }
+      }
+    }
+  }
+}

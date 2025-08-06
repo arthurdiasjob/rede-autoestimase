@@ -1,0 +1,87 @@
+@use "../../app/breakpoints";
+
+.contentSection {
+  text-align: center;
+  background: var(--primary-color);
+  padding-top: 40px;
+  color: var(--primary-text-color);
+}
+.awardsSection {
+  text-align: center;
+  padding: 50px 20px;
+}
+.subtitle {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  line-height: 0.3em;
+  font-weight: var(--font-weight-bold);
+}
+.title {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--primary-color);
+  line-height: 42px;
+  font-size: 32px;
+}
+.description {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 1rem;
+  color: var(--secondary-text-color);
+  line-height: 0.3em;
+  font-weight: var(--font-weight-bold);
+}
+.awardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.awardItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  img {
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .year {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+}
+.descriptionBox {
+  width: 65%;
+  min-height: 60px;
+  border: 1px solid var(--primary-color);
+  border-radius: 40px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@include breakpoints.media("<tablet") {
+  .awardsGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}

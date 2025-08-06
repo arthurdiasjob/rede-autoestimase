@@ -1,0 +1,180 @@
+@use "../../../_breakpoints.scss";
+
+.banner {
+  background-color: black;
+}
+
+.resizeImages {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  overflow: hidden;
+}
+
+.contentContainer {
+  position: relative;
+  top: -70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  h2,
+  p {
+    position: static;
+  }
+
+  h2 {
+    position: relative;
+    top: -17px;
+  }
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: var(--secondary-neutral-color);
+  text-align: left;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 760px;
+  margin-top: 10rem;
+}
+
+.sectionTitle {
+  margin-top: 3rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: anchor-center;
+  gap: 16px;
+  margin-top: -5rem;
+
+  .sectionTitle {
+    color: var(--primary-color);
+  }
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card {
+  width: 371px;
+  height: 459px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .cardImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    z-index: 1;
+  }
+
+  .cardWarrper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 140px;
+
+    .cardTitle {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    .cardDescription {
+      font-size: 1rem;
+      font-weight: 400;
+      color: white;
+      line-height: 1.5rem;
+      flex-grow: 1;
+      max-width: 90%;
+      white-space: normal;
+
+      &::after {
+        background: linear-gradient(to right, black, #333);
+        content: "";
+      }
+    }
+  }
+}
+
+.splitViewContainer {
+  position: relative;
+  top: 3rem;
+  color: var(--primary-text-color);
+
+  .sectionTitle {
+    position: relative;
+    top: -30px;
+  }
+
+  .splitViewWrapper {
+    background-color: var(--secondary-neutral-color);
+    padding-bottom: 5rem;
+  }
+
+  h2 {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background-color: var(--tertiary-neutral-color);
+    padding: 0 1rem;
+  }
+}
+
+.ornament {
+  position: relative;
+  top: -100px;
+  right: 25%;
+  width: 20rem;
+  max-height: 15rem;
+}
+
+@include breakpoints.media("<tablet") {
+  .textBox {
+    margin-top: 10rem;
+  }
+
+  .sectionTitle {
+    margin-top: 3rem;
+  }
+
+  .card {
+    max-width: 70%;
+    height: auto;
+  }
+
+  .ornament {
+    top: -80px;
+    right: 0;
+    max-width: 15rem;
+    max-height: 10rem;
+  }
+}

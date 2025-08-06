@@ -1,0 +1,152 @@
+@use "../../breakpoints";
+
+.container {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 30px auto;
+  max-width: 800px;
+  font-weight: 700;
+}
+.description {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 32px;
+}
+
+.iframeWrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    border: none;
+  }
+}
+
+.infoSection {
+  margin: 48px auto 0 auto;
+  max-width: 1100px;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary-neutral-color);
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.sectionSubtitle {
+  font-size: 12px;
+  color: var(--secondary-neutral-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  background: none;
+  border: none;
+  padding: 16px 12px 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.cardIcon {
+  width: 281px;
+  height: 160px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.98rem;
+  color: var(--secondary-neutral-color);
+  margin-bottom: 0;
+}
+
+.ctaButton {
+  margin-top: 18px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ctaButton:hover {
+  background: var(--secondary-color);
+}
+
+@media (max-width: 900px) {
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .infoSection {
+    padding: 20px 6px;
+  }
+  .highlight {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+  }
+  .cardsWrapper {
+    align-items: center;
+  }
+}

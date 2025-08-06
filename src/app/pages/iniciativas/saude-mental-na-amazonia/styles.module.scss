@@ -1,0 +1,148 @@
+@use "../../../_breakpoints.scss";
+
+.resizeImages {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.pageContainer {
+  background-color: var(--tertiary-neutral-color);
+}
+
+.contentContainer {
+  position: relative;
+  top: -70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section2 {
+  max-height: 31rem;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem;
+
+  color: var(--primary-text-color);
+  text-align: left;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 760px;
+
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    position: absolute;
+    top: 160px;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 2.9rem;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 23.5rem;
+  height: 23.5rem;
+
+  border-radius: 10px;
+  margin-bottom: 2rem;
+
+  overflow: hidden;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.splitViewContainer {
+  position: relative;
+  top: -2rem;
+  color: var(--secondary-neutral-color);
+
+  .sectionTitle {
+    position: relative;
+    top: -30px;
+  }
+
+  .splitViewWrapper {
+    background-color: var(--primary-neutral-color);
+  }
+
+  h2 {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    text-align: center;
+    background-color: var(--tertiary-neutral-color);
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+.ornament {
+  position: relative;
+  top: -100px;
+  right: 25%;
+  width: 20rem;
+  max-height: 15rem;
+}
+
+@include breakpoints.media("<tablet") {
+  .textBox {
+    p {
+      text-align: justify;
+    }
+  }
+
+  .splitViewWrapper {
+    padding-bottom: 5rem;
+  }
+
+  .contentContainer {
+    h2,
+    p {
+      position: static;
+    }
+
+    h2 {
+      position: relative;
+      top: -17px;
+    }
+
+    .card {
+      max-width: 70%;
+      height: auto;
+    }
+
+    .ornament {
+      top: -80px;
+      right: 0;
+      max-width: 15rem;
+      max-height: 10rem;
+    }
+  }
+  .section2 {
+    max-height: 45rem;
+  }
+
+  .banner {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}

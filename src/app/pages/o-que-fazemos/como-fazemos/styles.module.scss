@@ -1,0 +1,258 @@
+@use "../../../breakpoints";
+
+  .comoFazemos {
+    padding-top: 3rem; 
+    text-align: center;
+    background: var(--primary-neutral-color);
+    margin-bottom: 3rem;
+
+  }
+  .title_text {
+    letter-spacing: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--secondary-text-color);
+  }
+  .title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    line-height: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background: var(--primary-neutral-color);
+    height: 459px;
+    padding: 20px;
+    overflow: hidden;
+    text-align: left;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.5));
+  }
+  .cardContent {
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    padding: 15px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start; 
+    z-index: 2;
+  }
+  .cardTitle {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--primary-text-color);
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1.2;
+    max-width: 90%;
+  }
+  .cardDescription {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-text-color);
+    line-height: 1.5;
+    text-align: left;
+    max-width: 100%;
+    height: 10rem;
+
+  }
+  .strategyWrapper {
+    width: 100vw !important; 
+    max-width: 100% !important;
+    margin: 0;
+    padding: 0;
+    margin-top: 5rem;
+  }
+  .strategiesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100vw;
+    width: 100%;
+    margin-top: 0;
+  }
+  .strategyCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 250px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    margin: 0 ;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .strategyCard:last-child {
+   position: relative;
+   margin-bottom: -50px;
+  }
+  .strategyCard:nth-child(1) {
+    background: var(--primary-color);
+    color: var(--primary-text-color);
+  }
+  .strategyCard:nth-child(2) {
+    background: var(--primary-neutral-color);
+    color: var(--secondary-text-color);
+  }
+  .strategyCard:nth-child(3) {
+    background: var(--secondary-neutral-color);
+    color: var(--primary-text-color);
+  }
+  .teste {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .strategyTitle {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 100%;
+  }
+  .description_teste {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+  }
+  .strategyDescription {
+    line-height: 24px;
+    word-break: break-word;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: left;
+  }
+  .expandButton {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: underline;
+    color: inherit;
+    align-self: flex-start;
+  }
+  .strategyCard:nth-child(1) .expandButton {
+    color: var(--primary-neutral-color);
+  }
+  .strategyCard:nth-child(2) .expandButton {
+    color: var(--primary-color);
+  }
+  .strategyCard:nth-child(3) .expandButton {
+    color: var(--primary-neutral-color);
+  }
+
+@include breakpoints.media("<tablet") {
+  .title {
+    font-size: 28px;
+    .noBreak {
+      white-space: nowrap;
+    }
+  }
+  .cardsContainer{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+   width:265px !important;
+   height: 459px;
+  }
+  .teste {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .strategyCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 50px 25px;
+    height: auto;
+    max-width: 100%;
+  }
+  .strategyTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+    white-space: pre-line;  
+    letter-spacing: 2px;
+    padding-bottom: 0.5rem;
+  }
+  .description_teste {
+    width: 85%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+  }
+  .strategyDescription {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .expandButton {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

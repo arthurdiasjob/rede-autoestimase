@@ -1,0 +1,152 @@
+@use "../../../breakpoints";
+
+.pageContainer {
+  overflow: hidden;
+}
+
+.volunteering,
+.icon,
+.advantages,
+.howToJoin,
+.cardStepsWapper,
+.cardAdvantagesWrapper,
+.subtitleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardAdvantagesWrapper,
+.cardStepsWapper {
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  gap: 1.5rem;
+}
+
+.textBox,
+.advantages,
+.textBox,
+.subtitleBox {
+  text-align: center;
+}
+
+//
+
+.banner {
+  background-color: rgb(85, 85, 85);
+}
+
+.volunteering {
+  position: relative;
+  padding: 6rem 1rem;
+}
+
+.icon {
+  position: absolute;
+  top: -30px;
+
+  border: solid 2px var(--primary-color);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+
+  span {
+    font-size: 35.5px;
+    font-weight: 400;
+    color: var(--primary-color);
+  }
+}
+
+.textBox {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 760px;
+}
+
+//
+
+.advantages {
+  background-color: var(--primary-color);
+  padding: 5rem 1rem;
+
+  h1 {
+    color: var(--primary-text-color);
+    font-size: 2.25rem;
+    font-weight: 800;
+
+    padding-bottom: 2rem;
+  }
+}
+
+.cardAdvantagesWrapper {
+  max-width: 1200px;
+}
+
+.cardService {
+  max-width: 376.67px;
+  max-height: 300px;
+}
+
+//
+
+.howToJoin {
+  position: relative;
+
+  h1 {
+    top: 55px;
+  }
+}
+
+.cardStepsWapper {
+  position: relative;
+  top: -250px;
+}
+
+.subtitleBox {
+  position: absolute;
+  bottom: -10px;
+  justify-content: flex-end;
+
+  max-width: 860px;
+  padding: 0 1rem 4rem 1rem;
+
+  font-weight: 700;
+  font-size: 32px;
+  list-style: 40.32px;
+  color: var(--nav-text-color);
+}
+
+//
+
+@include breakpoints.media("<tablet") {
+  .volunteering {
+    padding: 4rem 1rem;
+  }
+
+  .textBox {
+    text-align: justify;
+  }
+
+  //
+
+  .howToJoin {
+    position: relative;
+
+    h1 {
+      top: unset;
+    }
+  }
+
+  .cardStepsWapper {
+    top: -90px;
+  }
+
+  .subtitleBox {
+    position: relative;
+    bottom: 20px;
+  }
+}

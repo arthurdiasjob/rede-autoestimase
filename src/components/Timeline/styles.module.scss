@@ -1,0 +1,238 @@
+@use "../../app/breakpoints";
+
+.timelineSection {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  p {
+    text-align: left;
+    font-size: 16px;
+    color: var(--secondary-neutral-color);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.3em;
+    margin-top: 1rem;
+  }
+  h6 {
+    text-align: center;
+    font-size: 16px;
+    color: var(--secondary-neutral-color);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.3em;
+    margin-top: 1rem;
+  }
+}
+
+.timelineSection h2 {
+  width: 30rem;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--primary-color);
+}
+
+.timelineSubtitle {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  margin-top: -1rem;
+}
+.timelineOrder {
+  margin-top: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+}
+.orderButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &.active {
+    color: var(--primary-color);
+    font-weight: 600;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color);
+      z-index: 1;
+    }
+  }
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+.timeline {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  position: relative;
+}
+.timelineItem {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  align-items: center;
+  position: relative;
+  min-height: 240px;
+  gap: 0;
+  z-index: 1;
+  height: 100%;
+}
+.timelineText {
+  justify-self: end;
+  text-align: right;
+  max-width: 340px;
+  margin-right: 1.5rem;
+}
+.timelineItem:nth-child(even) .timelineText {
+  justify-self: start;
+  text-align: left;
+  margin-left: 1.5rem;
+  margin-right: 0;
+}
+.timelineImageWrapper {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  padding-left: 1.5rem;
+}
+.timelineItem:nth-child(even) .timelineImageWrapper {
+  justify-self: end;
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+.timelineImage {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  border-radius: 1em;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  object-fit: cover;
+}
+.timelineCenter {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 140%;
+  background: var(--secondary-neutral-color);
+  border-radius: 2px;
+  z-index: 1;
+}
+.timelineYear {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  padding: 0.2em 1.2em;
+  z-index: 2;
+  margin: 0;
+  white-space: nowrap;
+  margin-top: -10rem;
+  color: var(--secondary-neutral-color);
+}
+.timelineTitle {
+  text-align: left;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--secondary-neutral-color);
+  line-height: 1.2;
+}
+.timelineDescription {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+  margin: 0;
+}
+.timelineEnd h1 {
+  color: var(--year-text-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 3rem;
+}
+.timelineItem + .timelineItem {
+  margin-top: 6rem;
+}
+@media (max-width: 900px) {
+  .timeline {
+    gap: 4rem;
+  }
+  .timelineText,
+  .timelineItem:nth-child(even) .timelineText {
+    max-width: 220px;
+    margin: 0 0.5rem;
+  }
+  .timelineImage {
+    max-width: 180px;
+    min-height: 160px;
+  }
+}
+@media (max-width: 700px) {
+  .timelineItem {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: unset;
+  }
+  .timelineText,
+  .timelineItem:nth-child(even) .timelineText {
+    justify-self: stretch;
+    text-align: left;
+    margin: 0 0 1rem 0;
+    max-width: 100%;
+  }
+  .timelineImageWrapper,
+  .timelineItem:nth-child(even) .timelineImageWrapper {
+    justify-self: stretch;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  .timelineCenter {
+    min-width: unset;
+    height: 60px;
+  }
+  .timelineYear {
+    font-size: 2rem;
+    padding: 0.2em 0.8em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .timelineLine {
+    width: 3px;
+  }
+}
