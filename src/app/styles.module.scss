@@ -372,93 +372,6 @@
   }
 }
 
-.doadores {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 120px 136px;
-  gap: 112px;
-
-  .doadoresTop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-
-    .doadoresHeader {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-
-      div {
-        font-size: 16px;
-        color: var(--secondary-neutral-color);
-        font-weight: var(--font-weight-bold);
-        letter-spacing: 0.3em;
-      }
-
-      h1 {
-        font-size: 36px;
-        line-height: 42px;
-        color: var(--primary-color);
-        max-width: 525px;
-        text-align: center;
-      }
-    }
-
-    .logosContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-
-      .topLogos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 74px;
-      }
-
-      .bottomLogos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-      }
-    }
-  }
-
-  .doadoresBottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-
-    .doadoresHeader {
-      h1 {
-        font-size: 36px;
-        line-height: 42px;
-        color: var(--primary-color);
-        max-width: 525px;
-        text-align: center;
-      }
-    }
-
-    .partLogos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 59.12px;
-    }
-  }
-}
-
 .faq {
   display: flex;
   flex-direction: column;
@@ -555,6 +468,13 @@
 }
 
 @include breakpoints.media("<desktop") {
+  .resultadosHeader {
+    p {
+      font-size: 14px !important;
+      line-height: 24px !important;
+      max-width: 20.4rem !important;
+    }
+  }
   .homeAbout {
     flex-direction: column;
     padding: 60px 20px;
@@ -623,6 +543,15 @@
       font-size: 28px;
       line-height: 36px;
     }
+  }
+
+  .acolhimentoCount {
+    flex-direction: column;
+    align-items: normal !important;
+  }
+
+  .topLogos {
+
   }
 }
 
