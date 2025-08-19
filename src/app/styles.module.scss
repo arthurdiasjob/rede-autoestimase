@@ -462,6 +462,8 @@
         line-height: 28px;
         font-weight: var(--font-light-bold);
         font-family: var(--font-body);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
     }
   }

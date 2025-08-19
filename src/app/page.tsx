@@ -219,7 +219,7 @@ const SeeMore = ({
           <Image src={plus} alt="Mais conteudo" className={styles.rotateIcon} />
         )}
       </div>
-      {isActive && <div className={styles.seeMoreText}>{text}</div>}
+      {isActive && <p className={styles.seeMoreText}>{text}</p>}
     </div>
   );
 };
