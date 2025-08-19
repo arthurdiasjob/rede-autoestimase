@@ -468,6 +468,9 @@
 }
 
 @include breakpoints.media("<desktop") {
+  .acolhimentoCount {
+    padding: 0 !important;
+  }
   .resultadosHeader {
     p {
       font-size: 14px !important;
