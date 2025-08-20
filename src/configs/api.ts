@@ -5,7 +5,7 @@ import axios, {
 } from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "https://rede-autoestimasv2.vercel.app",
   timeout: 30000,
   headers: {
     "Content-Type": "application/json",
