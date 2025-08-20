@@ -27,7 +27,7 @@ const Footer = () => {
           </p>
           <p>
             <Link href="/pages/acolhimento" className={styles.footerLink}>
-              Acolhimento
+              Psicoterapia
             </Link>
           </p>
           <p>

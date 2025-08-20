@@ -197,42 +197,99 @@
     max-width: 220px;
     margin: 0 0.5rem;
   }
-  .timelineImage {
-    max-width: 180px;
-    min-height: 160px;
-  }
 }
 @media (max-width: 700px) {
+  .timelineSection h2 {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .timelineSection p,
+  .timelineSection h6 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .timelineOrder {
+    justify-content: center;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .timelineTitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+  }
+  .timelineDescription {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .timelineYear {
+    position: static;
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 0;
+    white-space: normal;
+    text-align: center;
+    display: contents;
+  }
+  .timelineLine {
+    position: static;
+    width: 2px;
+    height: 24px;
+    margin: 0 auto 1rem auto;
+    background: var(--secondary-neutral-color);
+  }
   .timelineItem {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: unset;
+    gap: 0.5rem;
+    text-align: center;
+    grid-template-columns: unset;
+    position: relative;
+    width: 100%;
   }
   .timelineText,
   .timelineItem:nth-child(even) .timelineText {
-    justify-self: stretch;
-    text-align: left;
-    margin: 0 0 1rem 0;
+    justify-self: unset;
+    text-align: center;
+    margin: 0;
     max-width: 100%;
   }
   .timelineImageWrapper,
   .timelineItem:nth-child(even) .timelineImageWrapper {
-    justify-self: stretch;
+    justify-self: unset;
     padding: 0;
-    margin-top: 1rem;
+    margin: 0 auto 1rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .timelineCenter {
-    min-width: unset;
-    height: 60px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0.5rem 0;
   }
-  .timelineYear {
-    font-size: 2rem;
-    padding: 0.2em 0.8em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .timelineLine {
-    width: 3px;
+  .timelineEnd h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-neutral-color);
+    letter-spacing: 0.05em;
   }
 }
