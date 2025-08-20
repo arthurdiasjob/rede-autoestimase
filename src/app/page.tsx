@@ -30,6 +30,7 @@ import micro from "../../public/assets/icons/microsoft.png";
 import git from "../../public/assets/icons/github.png";
 import canva from "../../public/assets/icons/canva.png";
 import org from "../../public/assets/icons/organizacoes.png";
+import orgMobile from "../../public/assets/icons/org-mobile.png";
 import ashokaCol from "../../public/assets/icons/ashoka-col.png";
 import afolhaCol from "../../public/assets/icons/afolha-col.png";
 import meta from "../../public/assets/icons/metaverso-col.png";
@@ -37,6 +38,8 @@ import pinheiro from "../../public/assets/icons/pinheiro-col.png";
 import bemtevi from "../../public/assets/icons/bemtevi.png";
 import plus from "../../public/assets/icons/pluscircle.png";
 import minus from "../../public/assets/icons/minuscircle.png";
+import Sponsors from "@/components/Sponsors/Sponsors";
+import Partners from "@/components/Partners/Partners";
 
 type Card = {
   title: string;
@@ -102,7 +105,7 @@ const reconContent: Reconhecimento[] = [
   },
 ];
 
-type Doadores = {
+export type Doadores = {
   logo: StaticImageData;
 };
 
@@ -216,7 +219,7 @@ const SeeMore = ({
           <Image src={plus} alt="Mais conteudo" className={styles.rotateIcon} />
         )}
       </div>
-      {isActive && <div className={styles.seeMoreText}>{text}</div>}
+      {isActive && <p className={styles.seeMoreText}>{text}</p>}
     </div>
   );
 };
@@ -379,41 +382,14 @@ export default function Home() {
       </section>
 
       <section className={styles.doadores}>
-        <div className={styles.doadoresTop}>
-          <div className={styles.doadoresHeader}>
-            <div>FAZEM A DIFERENÇA</div>
-            <h1>Doadores</h1>
-          </div>
-          <div className={styles.logosContainer}>
-            <div className={styles.topLogos}>
-              {doadoresLogos1.map((item, index) => (
-                <Image key={index} src={item.logo} alt="Logo" />
-              ))}
-            </div>
-            <div className={styles.bottomLogos}>
-              {doadoresLogos2.map((item, index) => (
-                <Image key={index} src={item.logo} alt="Logo" />
-              ))}
-            </div>
-            <div className={styles.org}>
-              <Image
-                src={org}
-                alt="Logo indicando que fazemos parte do Mapa das Organizações da Sociedade Civil"
-              />
-            </div>
-          </div>
-          <Button label="Conheça nossa lista de apoiadores" />
-        </div>
-        <div className={styles.doadoresBottom}>
-          <div className={styles.doadoresHeader}>
-            <h1>Parceiros</h1>
-          </div>
-          <div className={styles.partLogos}>
-            {parceiros.map((item, index) => (
-              <Image key={index} src={item.logo} alt="Logo" />
-            ))}
-          </div>
-        </div>
+        <Sponsors
+          doadoresLogos1={doadoresLogos1}
+          doadoresLogos2={doadoresLogos2}
+          org={org}
+          orgMobile={orgMobile}
+          Button={Button}
+        />
+        <Partners partnersLogo={parceiros} />
       </section>
 
       <section className={styles.divider}>
