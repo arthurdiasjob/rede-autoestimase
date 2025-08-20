@@ -50,6 +50,7 @@ const MediaSection = () => {
     );
   };
 
+  // SVGs para os botoes do carrossel
   const PrevArrowSVG = () => (
     <svg
       width="40"
