@@ -67,7 +67,7 @@
 
 .logosContainer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -87,7 +87,13 @@
   gap: 40px;
 }
 
-@include breakpoints.media("<desktop") {
+@include breakpoints.media(">tablet" and "<desktop") {
+  .topLogos {
+    gap: 30px !important;
+  }
+}
+
+@include breakpoints.media("<tablet") {
   .topLogos {
     flex-direction: column;
   }

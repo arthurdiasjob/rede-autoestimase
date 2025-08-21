@@ -2,7 +2,7 @@
 
 .doadoresBottom {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -25,8 +25,14 @@
   gap: 59.12px;
 }
 
-@include breakpoints.media("<desktop") {
+@include breakpoints.media("<tablet") {
   .partLogos {
     flex-direction: column;
+  }
+}
+
+@include breakpoints.media(">tablet" and "<desktop") {
+  .partLogos {
+    gap: 10px !important;
   }
 }
