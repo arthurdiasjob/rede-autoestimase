@@ -198,3 +198,13 @@
     margin: 2rem 0;
   }
 }
+
+@include breakpoints.media(">tablet" and "<desktop") {
+  .footer_warning {
+    padding: 0;
+  }
+
+  .footerContent {
+    width: initial;
+  }
+}
