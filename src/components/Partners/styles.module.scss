@@ -1,0 +1,32 @@
+@use "../../app/_breakpoints.scss";
+
+.doadoresBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.doadoresHeader {
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--primary-color);
+    max-width: 525px;
+    text-align: center;
+  }
+}
+
+.partLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 59.12px;
+}
+
+@include breakpoints.media("<desktop") {
+  .partLogos {
+    flex-direction: column;
+  }
+}
