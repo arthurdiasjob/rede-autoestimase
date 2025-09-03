@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import LanguageFlag from "../LanguageFlag/LanguageFlag";
 import NavbarMobile from "../NavbarMobile";
+import Button from "../Button/Button";
 
 interface MenuMobileProps {
   toggleMenu: () => void;
@@ -25,6 +26,9 @@ const MenuMobile = ({ toggleMenu }: MenuMobileProps) => {
       <div className="menu-content">
         <LanguageFlag />
         <NavbarMobile handleCloseMenus={toggleMenu}/>
+      </div>
+      <div className="wrapper-donate-button">
+        <Button label={"Doe Agora"} href={"/pages/doe"} className="donate" />
       </div>
     </div>
   );
