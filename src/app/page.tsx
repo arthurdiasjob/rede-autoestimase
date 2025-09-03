@@ -56,8 +56,8 @@ const cardContent: Card[] = [
     description:
       "Oferecemos atendimento psicológico de psicoterapia focal breve e grupos de acolhimento com profissionais da psicologia.",
     image: psicossocial,
-    alt: "",
-    link: "",
+    alt: "Assistência psicossocial",
+    link: "pages/acolhimento",
   },
   {
     title: "Comunicação",
@@ -65,7 +65,7 @@ const cardContent: Card[] = [
       "Propagamos o tema da saúde mental para profissionais da saúde, mídia e sociedade.",
     image: comunicacao,
     alt: "",
-    link: "",
+    link: "pages/iniciativas/vozes-do-bem-estar",
   },
   {
     title: "Advocacy",
@@ -73,7 +73,7 @@ const cardContent: Card[] = [
       "Trabalhamos para influenciar e defender as políticas de saúde mental e bem-estar.",
     image: advocacy,
     alt: "",
-    link: "",
+    link: "pages/iniciativas/atendimento-para-ativistas",
   },
 ];
 
