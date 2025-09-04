@@ -262,6 +262,7 @@ export default function Home() {
           <Button
             label="Acesse nossa ONE PAGE"
             className={styles.aboutButton}
+            href="https://bit.ly/onepageAutoestima-se"
           />
         </div>
 
