@@ -40,6 +40,7 @@ import plus from "../../public/assets/icons/pluscircle.png";
 import minus from "../../public/assets/icons/minuscircle.png";
 import Sponsors from "@/components/Sponsors/Sponsors";
 import Partners from "@/components/Partners/Partners";
+import Link from "next/link";
 
 type Card = {
   title: string;
@@ -55,8 +56,8 @@ const cardContent: Card[] = [
     description:
       "Oferecemos atendimento psicológico de psicoterapia focal breve e grupos de acolhimento com profissionais da psicologia.",
     image: psicossocial,
-    alt: "",
-    link: "",
+    alt: "Assistência psicossocial",
+    link: "pages/acolhimento",
   },
   {
     title: "Comunicação",
@@ -64,7 +65,7 @@ const cardContent: Card[] = [
       "Propagamos o tema da saúde mental para profissionais da saúde, mídia e sociedade.",
     image: comunicacao,
     alt: "",
-    link: "",
+    link: "pages/iniciativas/vozes-do-bem-estar",
   },
   {
     title: "Advocacy",
@@ -72,7 +73,7 @@ const cardContent: Card[] = [
       "Trabalhamos para influenciar e defender as políticas de saúde mental e bem-estar.",
     image: advocacy,
     alt: "",
-    link: "",
+    link: "pages/iniciativas/atendimento-para-ativistas",
   },
 ];
 
@@ -290,24 +291,26 @@ export default function Home() {
           <div className={styles.cardContainer}>
             {cardContent.map((item, index) => (
               <div key={index} className={styles.cardElement}>
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardElementContent}>
-                  <div className={styles.cardDesc}>
-                    <h2>{item.title}</h2>
-                    <p>{item.description}</p>
+                <Link href={item.link}>
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    className={styles.cardImage}
+                  />
+                  <div className={styles.cardElementContent}>
+                    <div className={styles.cardDesc}>
+                      <h2>{item.title}</h2>
+                      <p>{item.description}</p>
+                    </div>
+                    <button>
+                      <Image
+                        src={saibaArrow}
+                        alt='Seta indicando o botão "SAIBA MAIS"'
+                      />{" "}
+                      <div>SAIBA MAIS</div>
+                    </button>
                   </div>
-                  <button>
-                    <Image
-                      src={saibaArrow}
-                      alt='Seta indicando o botão "SAIBA MAIS"'
-                    />{" "}
-                    <div>SAIBA MAIS</div>
-                  </button>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

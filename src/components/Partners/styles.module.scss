@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
+    padding-bottom: 50px;
+    margin: 7.5rem 0;
 }
 
 .doadoresHeader {
@@ -34,5 +36,15 @@
 @include breakpoints.media(">tablet" and "<desktop") {
   .partLogos {
     gap: 10px !important;
+  }
+}
+
+@include breakpoints.media("<tablet") {
+  .doadoresHeader {
+    h1 {
+      font-size: 28px;
+      line-height: 32px;
+      max-width: 300px;
+    }
   }
 }

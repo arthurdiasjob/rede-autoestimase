@@ -48,6 +48,7 @@
   
   .menu-content {
     text-align: center;
+    margin-left: 20px;
 
     .logo-mobile {
       margin-bottom: 20px;
@@ -71,5 +72,27 @@
         }
       }
     }
+  }
+
+  .donate {
+    margin-top: 20px;
+    width: 70%;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .wrapper-donate-button {
+    position: fixed;
+    top: 85%;
+    right: -15px;
+    width: 100%;
+    border-top: #ECECEC 1px solid;
+    padding-left: 17px;
   }
 }

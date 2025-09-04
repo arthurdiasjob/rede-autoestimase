@@ -130,7 +130,7 @@
 
 @include breakpoints.media("<tablet") {
   .footerContainer {
-    padding: 40px 0.5rem 0;
+    padding: 64px 0.5rem 0;
     flex-direction: column;
   }
 
@@ -146,6 +146,7 @@
   .footerSection {
     h3 {
       margin-bottom: 1rem;
+      font-size: 16px;
     }
 
     p {

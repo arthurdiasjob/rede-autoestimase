@@ -50,7 +50,12 @@ const Sponsors = ({doadoresLogos1, doadoresLogos2, org, orgMobile, Button}: Spon
           </div>
         </MediaQuery>
       </div>
-      <Button label="Conheça nossa lista de apoiadores" />
+      <MediaQuery maxWidth={768}>
+        <Button label="Seja Nosso parceiro" />
+      </MediaQuery>
+      <MediaQuery minWidth={769}>
+        <Button label="Conheça nossa lista de apoiadores" />
+      </MediaQuery>
     </div>
   )
 }
