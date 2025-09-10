@@ -104,3 +104,9 @@
     font-size: 1.2rem;
   }
 }
+
+@include breakpoints.media(">desktop") {
+  .modalBackdrop {
+    left: 20%;
+  }
+}
