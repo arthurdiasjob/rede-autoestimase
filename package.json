@@ -16,6 +16,7 @@
     "@react-hook/media-query": "^1.1.1",
     "axios": "^1.10.0",
     "framer-motion": "^12.4.7",
+    "lucide-react": "^0.542.0",
     "material-symbols": "^0.28.1",
     "motion": "^12.4.7",
     "next": "^15.2.4",
