@@ -7,6 +7,7 @@ import "./globals.scss";
 import Header from "@/components/Header";
 import Footer from "../components/Footer/Footer";
 import BackToTop from "@/components/BackToTop/BackToTop";
+import CookieConsentModal from "@/components/CookieConsentModal/CookieConsentModal";
 
 const outfit = Outfit({
   variable: "--font-heading",
@@ -35,6 +36,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <BackToTop />
+        <CookieConsentModal />
       </body>
     </html>
   );

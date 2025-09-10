@@ -1,0 +1,26 @@
+.cookieFooter {
+  width: 100%;
+  display: flex;
+
+  // Mobile: Botões empilhados, com "Aceitar" no topo.
+  flex-direction: column-reverse;
+
+  // Desktop: Botões lado a lado, à direita.
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #dee2e6;
+  font-weight: 600;
+}
+
+.confirmButton {
+  background-color: #fff;
+  color: #945a9a;
+  font-weight: 600;
+}
