@@ -41,6 +41,8 @@ import minus from "../../public/assets/icons/minuscircle.png";
 import Sponsors from "@/components/Sponsors/Sponsors";
 import Partners from "@/components/Partners/Partners";
 import Link from "next/link";
+import MediaQuery from "react-responsive";
+import RecognitionSlider from "@/components/RecognitionSlider";
 
 type Card = {
   title: string;
@@ -368,12 +370,17 @@ export default function Home() {
           <h1>Reconhecimentos</h1>
         </div>
         <div className={styles.conquistasCardContainer}>
-          {reconContent.map((item, index) => (
-            <div key={index} className={styles.conquistasCardElement}>
-              <Image src={item.icon} alt="Logo da matéria" />
-              <p>{item.subject}</p>
-            </div>
-          ))}
+          <MediaQuery minWidth={768}>
+            {reconContent.map((item, index) => (
+              <div key={index} className={styles.conquistasCardElement}>
+                <Image src={item.icon} alt="Logo da matéria" />
+                <p>{item.subject}</p>
+              </div>
+            ))}
+          </MediaQuery>
+          <MediaQuery maxWidth={767}>
+            <RecognitionSlider reconContent={reconContent} />
+          </MediaQuery>
         </div>
       </section>
 

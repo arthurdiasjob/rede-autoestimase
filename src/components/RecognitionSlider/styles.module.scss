@@ -1,0 +1,37 @@
+.conquistasCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  .conquistasCardElement {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    color: var(--primary-neutral-color);
+    width: 214.8px;
+    height: 300px;
+    border: 1px solid var(--quaternary-neutral-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 24px 16px;
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+.navButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
