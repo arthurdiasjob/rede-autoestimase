@@ -33,8 +33,8 @@ const Header = () => {
             <Image
               src="/assets/logo/logo-mobile.svg"
               alt="Logo da Rede Autoestima-se"
-              width={44.71}
-              height={56.03}
+              width={45}
+              height={56}
             />
           </Link>
           <Button label={"Doe"} href={"/pages/doe"} className="donate" />
