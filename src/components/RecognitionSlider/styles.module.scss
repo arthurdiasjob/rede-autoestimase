@@ -35,3 +35,35 @@
     cursor: not-allowed;
   }
 }
+
+.animationCard {
+  animation: conquistasCardElementAnimationLeft 0.5s ease-in-out;
+}
+
+.animationCard2 {
+  animation: conquistasCardElementAnimationRight 0.5s ease-in-out;
+}
+
+
+/* Keyframes for Slide Animation */
+@keyframes conquistasCardElementAnimationLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes conquistasCardElementAnimationRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
